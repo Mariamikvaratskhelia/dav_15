@@ -1,0 +1,13 @@
+{% extends 'movies/base.html' %}
+
+{% block content %}
+<h2>Movie Exact</h2>
+{% for movie in movie_exact %}
+<p>{{ movie.title }} - {{ movie.genre }} - {{ movie.duration_minutes }}min - {{ movie.rating }}</p>
+{% endfor %}
+
+<h2>Viewers with last name containing 'son'</h2>
+{% for v in viewers_contains_lastname %}
+<p>{{ v.first_name }} {{ v.last_name }} - {{ v.email }}</p>
+{% endfor %}
+{% endblock %}
